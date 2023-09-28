@@ -1,19 +1,21 @@
+import java.util.function.LongFunction;
+
 public class Main {
     public static void main(String[] args) {
 
-        ChildBankAccount account =
-                new ChildBankAccount(10000);
-        account.depositMoney(1000);
-        account.depositMoney(2000);
-        account.depositMoney(10000);
-        account.depositMoney(-1000);
-        System.out.println("Balance: " + account.getBalance());
+        Country country = new Country("Россия");
+        country.setCountryName("Россия");
+        country.setCountrySquare(160.12);
+        country.setCountryCapitalName("Москва");
+        country.setCountryCountPeople(14600000);
+        country.setExitInSea(true);
 
-        account.debitMoney(500);
-        account.debitMoney(422.75);
-        account.debitMoney(50000);
-        account.debitMoney(-50);
-        System.out.println("Balance: " + account.getBalance());
+
+        System.out.println(country.getCountryName());
+        System.out.println(country.getCountryCapitalName());
+        System.out.println(country.getCountrySquare());
+        System.out.println(country.getCountryCountPeople());
+        System.out.println(country.getIsHaveExitInSea());
 
     }
 }
